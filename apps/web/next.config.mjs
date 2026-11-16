@@ -1,6 +1,5 @@
-import type { NextConfig } from "next";
-
-const config: NextConfig = {
+/** @type {import('next').NextConfig} */
+const config = {
   turbopack: { root: process.cwd() },
   async rewrites() {
     return [
@@ -32,4 +31,5 @@ const config: NextConfig = {
     ];
   },
 };
+
 export default config;
