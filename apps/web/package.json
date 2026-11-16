@@ -23,5 +23,8 @@
     "@types/react-dom": "19.3.0",
     "prettier": "3.10.0",
     "typescript": "7.0.2"
+  },
+  "optionalDependencies": {
+    "@next/swc-wasm-nodejs": "^16.4.6"
   }
 }
