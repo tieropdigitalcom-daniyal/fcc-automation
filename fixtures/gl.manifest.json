@@ -1,0 +1,677 @@
+{
+  "version": "1",
+  "dataset_id": "November 2026 GL synthetic snapshot",
+  "side": "GL",
+  "source_system": "SYNTHETIC_GL",
+  "extracted_at": "2026-11-11T12:00:00+00:00",
+  "row_count": 34,
+  "byte_count": 6877,
+  "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+  "complete": true,
+  "precision_verified": true,
+  "policy_id": "demo-policy-v1",
+  "unit": "units",
+  "expected_povs": [
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "US100",
+      "account": "400100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "USD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "US100",
+      "account": "400200",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "USD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "US100",
+      "account": "610100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "USD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "US100",
+      "account": "210100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "USD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "GB200",
+      "account": "400100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "EUR",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "GB200",
+      "account": "400200",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "EUR",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "GB200",
+      "account": "610100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "EUR",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "GB200",
+      "account": "210100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "EUR",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "JP300",
+      "account": "400100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "JPY",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "JP300",
+      "account": "400200",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "JPY",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "JP300",
+      "account": "610100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "JPY",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "JP300",
+      "account": "210100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "JPY",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "KW400",
+      "account": "400100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "KWD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "KW400",
+      "account": "400200",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "KWD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "KW400",
+      "account": "610100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "KWD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "KW400",
+      "account": "210100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "KWD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "GROUP",
+      "account": "400100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "USD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "GROUP",
+      "account": "400200",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "USD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "GROUP",
+      "account": "610100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "USD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "GROUP",
+      "account": "210100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "USD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "SHARE",
+      "account": "400100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "USD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "SHARE",
+      "account": "400200",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "USD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "SHARE",
+      "account": "610100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "USD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "SHARE",
+      "account": "210100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "USD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "US100",
+      "account": "150100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "USD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "GB200",
+      "account": "150100",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "EUR",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "US100",
+      "account": "130100",
+      "intercompany": "GROUP",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "USD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "GROUP",
+      "account": "130100",
+      "intercompany": "US100",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "USD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "US100",
+      "account": "399900",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "USD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "GB200",
+      "account": "399900",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "EUR",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "JP300",
+      "account": "399900",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "JPY",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "KW400",
+      "account": "399900",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "KWD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "GROUP",
+      "account": "399900",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "USD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    },
+    {
+      "environment": "TEST",
+      "application": "FCCS_DEMO",
+      "cube": "Consol",
+      "scenario": "Actual",
+      "year": "FY26",
+      "period": "Nov",
+      "view": "FCCS_Periodic",
+      "entity": "SHARE",
+      "account": "399900",
+      "intercompany": "ICP_None",
+      "movement": "FCCS_Mvmts_NetIncome",
+      "data_source": "FCCS_Managed Data",
+      "consolidation": "FCCS_Entity Input",
+      "currency": "USD",
+      "custom": {
+        "Department": "Corporate"
+      }
+    }
+  ],
+  "totals_by_currency": {
+    "KWD": "0.000",
+    "JPY": "0",
+    "USD": "0.00000000000000",
+    "EUR": "0.00"
+  },
+  "journals": {
+    "J-US100": 2,
+    "J-GB200": 2,
+    "J-JP300": 2,
+    "J-KW400": 2,
+    "J-GROUP": 2,
+    "J-SHARE": 2
+  },
+  "controls": {}
+}

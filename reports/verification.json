@@ -1,0 +1,134 @@
+{
+  "recorded_at": "2026-11-11T20:52:01.203827+00:00",
+  "scope": "Local synthetic application release; no production certification or live Oracle execution",
+  "rules_version": "2026.11.2",
+  "environment": {
+    "os": "Windows",
+    "python": "3.12.14",
+    "node": "24.22.0",
+    "postgresql_integration_server": "18.6",
+    "browser": "Microsoft Edge via Playwright"
+  },
+  "backend": {
+    "result": "PASS",
+    "database": "SQLite",
+    "tests": 87,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "by_module": {
+      "tests.test_api": 17,
+      "tests.test_financial": 46,
+      "tests.test_oracle": 24
+    }
+  },
+  "postgresql_api": {
+    "result": "PASS",
+    "same_api_tests_repeated_on_postgresql": true,
+    "tests": 17,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "by_module": {
+      "tests.test_api": 17
+    }
+  },
+  "browser": {
+    "result": "PASS",
+    "startTime": "2026-11-11T20:49:50.636Z",
+    "duration": 28211.498,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0,
+    "scenarios": [
+      "Real import, validation, exact cent drilldown, review, and evidence ZIP download",
+      "All requested functional screen routes and mock connection status",
+      "390px mobile layout and downloadable reports",
+      "Simulated queued API responses followed by real terminal data; automatic UI polling"
+    ]
+  },
+  "frontend": {
+    "typecheck": "PASS",
+    "next_production_build": "PASS",
+    "prerendered_pages": 16,
+    "workspace_screens": 14,
+    "build_id": "QSoSNF9hJijkvD809bOsW"
+  },
+  "security_checks": {
+    "bandit_findings": 0,
+    "bandit_scope": "packages and services; reviewed EPM subprocess annotations",
+    "npm_reported_vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "pip_reported_vulnerabilities": 0,
+    "pip_packages_checked": 86,
+    "independent_penetration_test": "NOT EXECUTED"
+  },
+  "artifacts": {
+    "pdf": "One-page sample summary rendered and visually inspected",
+    "screenshots": "Desktop dashboard, exact-cent lineage, and mobile layout visually inspected",
+    "sample_controls": {
+      "PASS": 67,
+      "FAIL": 9,
+      "BLOCKED": 0,
+      "NOT_APPLICABLE": 1
+    }
+  },
+  "local_operations": {
+    "startup_script_with_existing_dependencies": "PASS",
+    "database_initialization_and_seed": "PASS",
+    "api_readiness": "PASS",
+    "stop_script_and_loopback_port_release": "PASS",
+    "preview_services": "Stopped after verification"
+  },
+  "configuration": {
+    "compose_yaml": "Parsed; eight services",
+    "github_actions_yaml": "Parsed; not remotely executed"
+  },
+  "known_warnings": [
+    "Starlette test client and Authlib reported upstream httpx deprecation warnings"
+  ],
+  "unverified": [
+    "Full Docker Compose execution",
+    "Live Oracle TEST requests and tenant export format normalization",
+    "Enterprise OIDC and externally managed Oracle token refresh",
+    "Distributed Redis/Celery transport and outage tests",
+    "Actual S3 retention/encryption enforcement",
+    "Real notification delivery",
+    "EPM Automate tenant execution",
+    "Production load, backup restore, penetration testing, finance UAT and go-live approval"
+  ],
+  "dependency_versions": {
+    "fastapi": "0.162.4",
+    "sqlalchemy": "2.1.8",
+    "alembic": "1.20.1",
+    "celery": "5.7.0",
+    "redis": "8.1.0",
+    "pydantic": "2.14.3",
+    "psycopg": "3.3.8",
+    "authlib": "1.9.5",
+    "httpx": "0.28.1"
+  },
+  "evidence_sha256": {
+    "bandit.json": "7ca58c4b9da1d2fb74fa16e2cb3e4166fa4cc834b66982636ccf07d373a3b398",
+    "browser-audit-bundle.zip": "7641239a6568b1b0a3f0a5b0f1aaee3064263995e27c1240c4943b407bad2282",
+    "dashboard.png": "b0a95c307d8c5913eb1775640b689cdb80a3661d517eea6adb67a4a50dea9bf0",
+    "exact-cent-evidence.png": "6a6215dd1d068fd6f42e1150994faf3f329ba28a5546d03e32807eebbbe98310",
+    "mobile.png": "e9404a1308059b44513092a4ec7990855b836f2e021050975e8a887c3bacd49e",
+    "npm-audit.json": "9b5287a960d73202f7c4aab235a696633797867a9e507049e354fa8a105576bc",
+    "pip-audit.json": "4976e73db68c0d9d1f18a7293eaf2e4d115f201ada939cac662e8f4c4e070efb",
+    "playwright.json": "759c3a3d6429181281c02f0b1c30af5e8c0193a0c7ba32aef29873daa2528137",
+    "postgres.xml": "8b3b5115a564e178deef67cff389d5abf4964173f5802edaaac6092d30a34ff5",
+    "pytest.xml": "321255030175546532978d7f451fe10378adebb8f4289412752ce48e455dce5c",
+    "sample-audit.csv": "2a6bfcff4648a288f2b480d0039916f5612010a38b44be10498b5b87fa8d3e64",
+    "sample-audit.json": "4da5866b175e28f1284f933b7c9166357518f0e570be661ff53ad61d840f8e5d",
+    "sample-audit.pdf": "4ac6be9c05296c82b010c6f794af125ddbe3571d7386232bc5ed17744f93aba0",
+    "sample-evidence-bundle.zip": "63d5d205dbcc8fe121120ef725bbae14fcc038005f501f9231ef34f01cea0f20"
+  }
+}

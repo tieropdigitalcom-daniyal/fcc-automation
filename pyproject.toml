@@ -1,0 +1,13 @@
+[project]
+name = "fccs-validation"
+version = "0.1.0"
+requires-python = ">=3.12"
+description = "Read-only FCCS validation with exact decimal evidence"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 110

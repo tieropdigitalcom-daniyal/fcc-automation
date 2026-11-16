@@ -1,0 +1,12 @@
+.env
+.venv/
+node_modules/
+.next/
+__pycache__/
+.pytest_cache/
+.hypothesis/
+*.pyc
+*.tsbuildinfo
+runtime/
+test-results/
+playwright-report/

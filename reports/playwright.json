@@ -1,0 +1,416 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\playwright.config.ts",
+    "rootDir": "C:/Users/PC/Documents/Codex/2026-11-12/hi/outputs/fccs-validation/apps/web/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/PC/Documents/Codex/2026-11-12/hi/outputs/fccs-validation/apps/web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "C:/Users/PC/Documents/Codex/2026-11-12/hi/outputs/fccs-validation/apps/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "desktop",
+        "testDir": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e",
+        "snapshotDir": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3000",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.8127.18 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../../reports/playwright.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "workflow.spec.ts",
+      "file": "workflow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "import, validate, inspect exact cent, assign and export evidence",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 814,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3000/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:3000/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3000/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:3000/\", waiting until \"load\"\u001b[22m\n\n    at signIn (C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts:5:14)\n    at C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts:19:9",
+                    "location": {
+                      "file": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts",
+                      "column": 14,
+                      "line": 5
+                    },
+                    "snippet": " \u001b[90m 3 |\u001b[39m\n \u001b[90m 4 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m signIn(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m profile \u001b[33m=\u001b[39m \u001b[32m\"demo-analyst\"\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"/\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m\"Choose a demonstration profile\"\u001b[39m)\u001b[33m.\u001b[39mselectOption(profile)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Open workspace\"\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m   \u001b[36mawait\u001b[39m expect("
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts",
+                        "column": 14,
+                        "line": 5
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3000/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:3000/\", waiting until \"load\"\u001b[22m\n\n\n \u001b[90m 3 |\u001b[39m\n \u001b[90m 4 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m signIn(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m profile \u001b[33m=\u001b[39m \u001b[32m\"demo-analyst\"\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"/\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m\"Choose a demonstration profile\"\u001b[39m)\u001b[33m.\u001b[39mselectOption(profile)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Open workspace\"\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m   \u001b[36mawait\u001b[39m expect(\n\u001b[2m    at signIn (C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts:5:14)\u001b[22m\n\u001b[2m    at C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts:19:9\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-11T21:34:34.743Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\test-results\\workflow-import-validate-i-9b027--assign-and-export-evidence-desktop\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\test-results\\workflow-import-validate-i-9b027--assign-and-export-evidence-desktop\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\test-results\\workflow-import-validate-i-9b027--assign-and-export-evidence-desktop\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts",
+                    "column": 14,
+                    "line": 5
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-11ca804229139a74cac5",
+          "file": "workflow.spec.ts",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "every requested page loads real service data",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 610,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3000/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:3000/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3000/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:3000/\", waiting until \"load\"\u001b[22m\n\n    at signIn (C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts:5:14)\n    at C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts:84:9",
+                    "location": {
+                      "file": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts",
+                      "column": 14,
+                      "line": 5
+                    },
+                    "snippet": " \u001b[90m 3 |\u001b[39m\n \u001b[90m 4 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m signIn(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m profile \u001b[33m=\u001b[39m \u001b[32m\"demo-analyst\"\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"/\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m\"Choose a demonstration profile\"\u001b[39m)\u001b[33m.\u001b[39mselectOption(profile)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Open workspace\"\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m   \u001b[36mawait\u001b[39m expect("
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts",
+                        "column": 14,
+                        "line": 5
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3000/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:3000/\", waiting until \"load\"\u001b[22m\n\n\n \u001b[90m 3 |\u001b[39m\n \u001b[90m 4 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m signIn(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m profile \u001b[33m=\u001b[39m \u001b[32m\"demo-analyst\"\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"/\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m\"Choose a demonstration profile\"\u001b[39m)\u001b[33m.\u001b[39mselectOption(profile)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Open workspace\"\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m   \u001b[36mawait\u001b[39m expect(\n\u001b[2m    at signIn (C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts:5:14)\u001b[22m\n\u001b[2m    at C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts:84:9\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-11T21:34:40.932Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\test-results\\workflow-every-requested-page-loads-real-service-data-desktop\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\test-results\\workflow-every-requested-page-loads-real-service-data-desktop\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts",
+                    "column": 14,
+                    "line": 5
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-57e04a0795294fdd2dea",
+          "file": "workflow.spec.ts",
+          "line": 83,
+          "column": 1
+        },
+        {
+          "title": "mobile layout keeps controls reachable",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 834,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3000/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:3000/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3000/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:3000/\", waiting until \"load\"\u001b[22m\n\n    at signIn (C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts:5:14)\n    at C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts:114:9",
+                    "location": {
+                      "file": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts",
+                      "column": 14,
+                      "line": 5
+                    },
+                    "snippet": " \u001b[90m 3 |\u001b[39m\n \u001b[90m 4 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m signIn(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m profile \u001b[33m=\u001b[39m \u001b[32m\"demo-analyst\"\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"/\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m\"Choose a demonstration profile\"\u001b[39m)\u001b[33m.\u001b[39mselectOption(profile)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Open workspace\"\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m   \u001b[36mawait\u001b[39m expect("
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts",
+                        "column": 14,
+                        "line": 5
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3000/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:3000/\", waiting until \"load\"\u001b[22m\n\n\n \u001b[90m 3 |\u001b[39m\n \u001b[90m 4 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m signIn(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m profile \u001b[33m=\u001b[39m \u001b[32m\"demo-analyst\"\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"/\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m\"Choose a demonstration profile\"\u001b[39m)\u001b[33m.\u001b[39mselectOption(profile)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Open workspace\"\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m   \u001b[36mawait\u001b[39m expect(\n\u001b[2m    at signIn (C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts:5:14)\u001b[22m\n\u001b[2m    at C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts:114:9\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-11T21:34:46.237Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\test-results\\workflow-mobile-layout-keeps-controls-reachable-desktop\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\test-results\\workflow-mobile-layout-keeps-controls-reachable-desktop\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\test-results\\workflow-mobile-layout-keeps-controls-reachable-desktop\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts",
+                    "column": 14,
+                    "line": 5
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-6e984c13eb522bda9985",
+          "file": "workflow.spec.ts",
+          "line": 112,
+          "column": 1
+        },
+        {
+          "title": "queued API state stays pending and refreshes after completion",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 803,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3000/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:3000/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3000/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:3000/\", waiting until \"load\"\u001b[22m\n\n    at signIn (C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts:5:14)\n    at C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts:126:9",
+                    "location": {
+                      "file": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts",
+                      "column": 14,
+                      "line": 5
+                    },
+                    "snippet": " \u001b[90m 3 |\u001b[39m\n \u001b[90m 4 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m signIn(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m profile \u001b[33m=\u001b[39m \u001b[32m\"demo-analyst\"\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"/\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m\"Choose a demonstration profile\"\u001b[39m)\u001b[33m.\u001b[39mselectOption(profile)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Open workspace\"\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m   \u001b[36mawait\u001b[39m expect("
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts",
+                        "column": 14,
+                        "line": 5
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3000/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:3000/\", waiting until \"load\"\u001b[22m\n\n\n \u001b[90m 3 |\u001b[39m\n \u001b[90m 4 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m signIn(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m profile \u001b[33m=\u001b[39m \u001b[32m\"demo-analyst\"\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"/\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m\"Choose a demonstration profile\"\u001b[39m)\u001b[33m.\u001b[39mselectOption(profile)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Open workspace\"\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m   \u001b[36mawait\u001b[39m expect(\n\u001b[2m    at signIn (C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts:5:14)\u001b[22m\n\u001b[2m    at C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts:126:9\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-11T21:34:51.423Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\test-results\\workflow-queued-API-state--06f66--refreshes-after-completion-desktop\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\test-results\\workflow-queued-API-state--06f66--refreshes-after-completion-desktop\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\test-results\\workflow-queued-API-state--06f66--refreshes-after-completion-desktop\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\PC\\Documents\\Codex\\2026-11-12\\hi\\outputs\\fccs-validation\\apps\\web\\e2e\\workflow.spec.ts",
+                    "column": 14,
+                    "line": 5
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-66ed86d38681bc4b8467",
+          "file": "workflow.spec.ts",
+          "line": 123,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-11T21:34:32.119Z",
+    "duration": 21252.809,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

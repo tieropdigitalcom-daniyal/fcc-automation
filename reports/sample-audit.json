@@ -1,0 +1,5440 @@
+{
+  "report_schema": "1",
+  "data_mode": "demo",
+  "run_id": "d863f246e5b579e69f49c7b513fddf4d8f038375fc6ffca4db376603f6ff62af",
+  "created_by": "demo-analyst",
+  "created": "2026-11-11T20:44:25.718570+00:00",
+  "completed": "2026-11-11T20:44:25.762256+00:00",
+  "scope": [
+    "GB200",
+    "GROUP",
+    "JP300",
+    "KW400",
+    "SHARE",
+    "US100"
+  ],
+  "result": {
+    "status": "FAIL",
+    "rule_version": "2026.11.2",
+    "policy_id": "demo-policy-v1",
+    "policy_sha256": "0349872422a5d14ec95e7e67f7f8780a720c6002999bf85856b55047e56881d9",
+    "checks": [
+      {
+        "rule": "C01 Coverage",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Hashes, counts, precision and full declared scope verified",
+        "pov": {},
+        "expected": null,
+        "actual": null,
+        "variance": null,
+        "lineage": [],
+        "parameters": {
+          "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+          "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07"
+        },
+        "fingerprint": "6104106736fe8c34854cdabe06f232cccc8d01546147f9a5949f591141cefe8d"
+      },
+      {
+        "rule": "C01 Coverage",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Hashes, counts, precision and full declared scope verified",
+        "pov": {},
+        "expected": null,
+        "actual": null,
+        "variance": null,
+        "lineage": [],
+        "parameters": {
+          "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+          "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6"
+        },
+        "fingerprint": "53e50dd7d1148205f8cdc0cff423f88b704f2c3d364f20ef8996c8b35df0a2ed"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "FAIL",
+        "explanation": "Source minus FCCS differs at full stored precision",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GROUP",
+          "account": "130100",
+          "intercompany": "US100",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-75.00",
+        "actual": "-74.99",
+        "variance": "-0.01",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 29,
+            "record_id": "GROUP-IC"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 29,
+            "record_id": "GROUP-IC"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "1695c6d676c21ed4114a77212e43e3747bbb8c2c4d8d25eae5ed7e8aa31c27df"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "US100",
+          "account": "130100",
+          "intercompany": "GROUP",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "75.00",
+        "actual": "75.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 28,
+            "record_id": "US100-IC"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 28,
+            "record_id": "US100-IC"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "f0cb474b951c64b2deb6d8d6ff737ccf228f4fd025a782186f16ad0103fd2029"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GB200",
+          "account": "150100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "EUR",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "1086.42",
+        "actual": "1086.42",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 27,
+            "record_id": "GB200-FX"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 27,
+            "record_id": "GB200-FX"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "739ead3ba18a7310fac93f7e88e0246dae3e15a99f2fe55755b811539f9ff7d6"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "US100",
+          "account": "150100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "1234.56789123456789",
+        "actual": "1234.56789123456789",
+        "variance": "0.00000000000000",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 26,
+            "record_id": "US100-FX"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 26,
+            "record_id": "US100-FX"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "576409373ae94e281231db42b407e60df73387a39893f3a3f3bfbaf40c536b7b"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GB200",
+          "account": "210100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "EUR",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-50.00",
+        "actual": "-50.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 9,
+            "record_id": "GB200-210100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 9,
+            "record_id": "GB200-210100"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "a35c6d72a9c7e2146287047d37f8e3e24e0e54695245a040cf11c51acc9aef6e"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "JP300",
+          "account": "210100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "JPY",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-50",
+        "actual": "-50",
+        "variance": "0",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 13,
+            "record_id": "JP300-210100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 13,
+            "record_id": "JP300-210100"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "cf5796bd4cede48b1db5326ec68aa1ed339779cf262249b662626750701e06d6"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "KW400",
+          "account": "210100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "KWD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-50.000",
+        "actual": "-50.000",
+        "variance": "0.000",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 17,
+            "record_id": "KW400-210100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 17,
+            "record_id": "KW400-210100"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "b7f812fe50d92f14bf004bcdfd4cc12ef91a1b1988cc448fa04f37e3f1e2f1e0"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GROUP",
+          "account": "210100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-50.00",
+        "actual": "-50.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 21,
+            "record_id": "GROUP-210100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 21,
+            "record_id": "GROUP-210100"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "2bb7a9bfc2987ce0b9c77c9bb755bd03725bd418edca8b66424db4f3f2c7de90"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "SHARE",
+          "account": "210100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-50.00",
+        "actual": "-50.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 25,
+            "record_id": "SHARE-210100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 25,
+            "record_id": "SHARE-210100"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "ab6bc8112afc82908fbf58b394a48672519b2f9e0b98abac2370095f2a50e971"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "US100",
+          "account": "210100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-50.00",
+        "actual": "-50.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 5,
+            "record_id": "US100-210100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 5,
+            "record_id": "US100-210100"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "e1dc511625c38ee7ca2e07b918c90c33f8cd7619a5b55b5a31c17061340e6ad3"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GB200",
+          "account": "399900",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "EUR",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-1386.42",
+        "actual": "-1386.42",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 31,
+            "record_id": "GB200-EQUITY"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 31,
+            "record_id": "GB200-EQUITY"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "5a3a888c17540c9c2b4e2d2436b3987c85bdeb282d9be145a68e665a781ac119"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "JP300",
+          "account": "399900",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "JPY",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-300",
+        "actual": "-300",
+        "variance": "0",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 32,
+            "record_id": "JP300-EQUITY"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 32,
+            "record_id": "JP300-EQUITY"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "77dfad69ce9eda96d0883c99aa30a9298b1a227c0e9735e1041cc61d6d1110d3"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "KW400",
+          "account": "399900",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "KWD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-300.000",
+        "actual": "-300.000",
+        "variance": "0.000",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 33,
+            "record_id": "KW400-EQUITY"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 33,
+            "record_id": "KW400-EQUITY"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "8f6dadacd67407b9a6cddf5ac425a6c80971063b8baec9dbfbebf5cd262610e0"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GROUP",
+          "account": "399900",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-425.00",
+        "actual": "-425.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 34,
+            "record_id": "GROUP-EQUITY"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 34,
+            "record_id": "GROUP-EQUITY"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "15298f0956430705d55a5cb4c6c50a6f4e9bcc400880527b0b72e449d5cb7bae"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "SHARE",
+          "account": "399900",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-350.00",
+        "actual": "-350.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 35,
+            "record_id": "SHARE-EQUITY"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 35,
+            "record_id": "SHARE-EQUITY"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "ad093b36d6071b5377e421fcf1c87a2adfdbc87ef15ba5cbb6dd04554b0fc9c1"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "US100",
+          "account": "399900",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-1609.56789123456789",
+        "actual": "-1609.56789123456789",
+        "variance": "0.00000000000000",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 30,
+            "record_id": "US100-EQUITY"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 30,
+            "record_id": "US100-EQUITY"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "601d1341439a1a48cadd0968d86894412428a209125d7a0737c5cafff8c4f691"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GB200",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "EUR",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "100.00",
+        "actual": "100.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 6,
+            "record_id": "GB200-400100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 6,
+            "record_id": "GB200-400100"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "d60f21712ee9c107689a614f09ed60e3c9fc88660f533af8f3802c314fccff1b"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "FAIL",
+        "explanation": "Source minus FCCS differs at full stored precision",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "JP300",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "JPY",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "100",
+        "actual": "101",
+        "variance": "-1",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 10,
+            "record_id": "JP300-400100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 10,
+            "record_id": "JP300-400100"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "6885904670a26142f4d6fb819c7a01fab7f07bfae6876113121da221a07a6cdf"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "FAIL",
+        "explanation": "Source minus FCCS differs at full stored precision",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "KW400",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "KWD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "100.000",
+        "actual": "100.001",
+        "variance": "-0.001",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 14,
+            "record_id": "KW400-400100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 14,
+            "record_id": "KW400-400100"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "6004052ac91132d34e25b883d410845ff1dfcab71726afe49d7415fd5f263959"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GROUP",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "300.00",
+        "actual": "300.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 18,
+            "record_id": "GROUP-400100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 18,
+            "record_id": "GROUP-400100"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "e21df0f38a0840557e2f2075b79f1b6d86552f03de9c271e39780ebc00e1aa9b"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "SHARE",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "150.00",
+        "actual": "150.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 22,
+            "record_id": "SHARE-400100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 22,
+            "record_id": "SHARE-400100"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "10e32b0eebf3014b1ff9dd55bc906608b3a676f59fb112e49d2af18854f0f7cc"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "FAIL",
+        "explanation": "Source minus FCCS differs at full stored precision",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "US100",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "100.01",
+        "actual": "100.00",
+        "variance": "0.01",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 2,
+            "record_id": "US100-400100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 2,
+            "record_id": "US100-400100"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "44cbce570d909548df43746c666453559a3a1622bbe9404289abbe0cd57040d0"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GB200",
+          "account": "400200",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "EUR",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "200.00",
+        "actual": "200.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 7,
+            "record_id": "GB200-400200"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 7,
+            "record_id": "GB200-400200"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "1fab2dd79edf749d7e5dabb2f45ee07a9376e3b81d974b7d1e4953e0731bea89"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "JP300",
+          "account": "400200",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "JPY",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "200",
+        "actual": "200",
+        "variance": "0",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 11,
+            "record_id": "JP300-400200"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 11,
+            "record_id": "JP300-400200"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "fce71301714ca0cdc2d5158e21b5aa77e8f518ceaf9baef12425cab09b695d56"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "KW400",
+          "account": "400200",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "KWD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "200.000",
+        "actual": "200.000",
+        "variance": "0.000",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 15,
+            "record_id": "KW400-400200"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 15,
+            "record_id": "KW400-400200"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "ab79225fdc74ba02ebbb2520c763383040526401ad50d55708e535806b6ef29c"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GROUP",
+          "account": "400200",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "200.00",
+        "actual": "200.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 19,
+            "record_id": "GROUP-400200"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 19,
+            "record_id": "GROUP-400200"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "2b38660db4716fc7555ccefbc1a6a1d409bed7fcf0cedbde5eaf21aa9c776bf9"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "SHARE",
+          "account": "400200",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "200.00",
+        "actual": "200.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 23,
+            "record_id": "SHARE-400200"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 23,
+            "record_id": "SHARE-400200"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "93e2e469e4d79facf1aae464bb33d5b3de1d00c9a468cf75ce0da156baaf79ea"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "FAIL",
+        "explanation": "Source minus FCCS differs at full stored precision",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "US100",
+          "account": "400200",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "199.99",
+        "actual": "200.00",
+        "variance": "-0.01",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 3,
+            "record_id": "US100-400200"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 3,
+            "record_id": "US100-400200"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "de4eb7f20d9932eaced6c1e9bdb16f20e2afb5d8deaf6d891219ac102e3dc562"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GB200",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "EUR",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "50.00",
+        "actual": "50.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 8,
+            "record_id": "GB200-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 8,
+            "record_id": "GB200-610100"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "eea691ceaadd5c065df477e29e85f908303a8d8161febce986944b39611e6428"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "JP300",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "JPY",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "50",
+        "actual": "50",
+        "variance": "0",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 12,
+            "record_id": "JP300-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 12,
+            "record_id": "JP300-610100"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "63f96735a19c563518fdfd0cce412648f1ffc5ec25b928453c1115882138159d"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "KW400",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "KWD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "50.000",
+        "actual": "50.000",
+        "variance": "0.000",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 16,
+            "record_id": "KW400-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 16,
+            "record_id": "KW400-610100"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "01ff542fb478e7594abcc42a06ab9b4a9750de59c64dfac59501dc5fd45df1ff"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GROUP",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "50.00",
+        "actual": "50.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 20,
+            "record_id": "GROUP-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 20,
+            "record_id": "GROUP-610100"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "0a958d2a950c059017f7d386735a1c3affa7d881c2f55c65d9177b51f63c0db9"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "SHARE",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "50.00",
+        "actual": "50.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 24,
+            "record_id": "SHARE-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 24,
+            "record_id": "SHARE-610100"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "17bc80eb7400a691100feef32cf4114d4ca99e101772b7c75f8b51901c0ef883"
+      },
+      {
+        "rule": "C04 Reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Exact stored amounts match",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "US100",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "50.00",
+        "actual": "50.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 4,
+            "record_id": "US100-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 4,
+            "record_id": "US100-610100"
+          }
+        ],
+        "parameters": {
+          "mapping_version": "demo-policy-v1",
+          "tolerance": "0",
+          "rounding": "none"
+        },
+        "fingerprint": "c2fc60b0719bc5faa0f484c3d1c76e7dbf27c9ed3f343115dc3cbda7d5fc1a17"
+      },
+      {
+        "rule": "C06 Trial balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "GL signed trial balance",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "US100",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.00000000000000",
+        "variance": "0.00000000000000",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 2,
+            "record_id": "US100-400100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 3,
+            "record_id": "US100-400200"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 4,
+            "record_id": "US100-610100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 5,
+            "record_id": "US100-210100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 26,
+            "record_id": "US100-FX"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 28,
+            "record_id": "US100-IC"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 30,
+            "record_id": "US100-EQUITY"
+          }
+        ],
+        "parameters": {},
+        "fingerprint": "8bab53091e80c74f9e034a9ad046afe9f91343d78d632dccefc390d4857feb3b"
+      },
+      {
+        "rule": "C06 Trial balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "GL signed trial balance",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GB200",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "EUR",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 6,
+            "record_id": "GB200-400100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 7,
+            "record_id": "GB200-400200"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 8,
+            "record_id": "GB200-610100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 9,
+            "record_id": "GB200-210100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 27,
+            "record_id": "GB200-FX"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 31,
+            "record_id": "GB200-EQUITY"
+          }
+        ],
+        "parameters": {},
+        "fingerprint": "565efa81b5a2d45da466f3d09318bde03adeddacf7dce45b5df8dc7e404056f4"
+      },
+      {
+        "rule": "C06 Trial balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "GL signed trial balance",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "JP300",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "JPY",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0",
+        "variance": "0",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 10,
+            "record_id": "JP300-400100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 11,
+            "record_id": "JP300-400200"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 12,
+            "record_id": "JP300-610100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 13,
+            "record_id": "JP300-210100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 32,
+            "record_id": "JP300-EQUITY"
+          }
+        ],
+        "parameters": {},
+        "fingerprint": "e9a1a76cd054aacdc6eac5822dee02c7110b30355cabe1851bf754ee973a59f6"
+      },
+      {
+        "rule": "C06 Trial balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "GL signed trial balance",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "KW400",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "KWD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.000",
+        "variance": "0.000",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 14,
+            "record_id": "KW400-400100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 15,
+            "record_id": "KW400-400200"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 16,
+            "record_id": "KW400-610100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 17,
+            "record_id": "KW400-210100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 33,
+            "record_id": "KW400-EQUITY"
+          }
+        ],
+        "parameters": {},
+        "fingerprint": "dcd37d738b4e2b79d4cd5d7eb41b98be2a1ebc40c3668a42d5552a23d40fa6dc"
+      },
+      {
+        "rule": "C06 Trial balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "GL signed trial balance",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GROUP",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 18,
+            "record_id": "GROUP-400100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 19,
+            "record_id": "GROUP-400200"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 20,
+            "record_id": "GROUP-610100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 21,
+            "record_id": "GROUP-210100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 29,
+            "record_id": "GROUP-IC"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 34,
+            "record_id": "GROUP-EQUITY"
+          }
+        ],
+        "parameters": {},
+        "fingerprint": "1264812b89cc70e4efd3875789953ceab8077d9696b2d16ab0d43ff2f0e3dab9"
+      },
+      {
+        "rule": "C06 Trial balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "GL signed trial balance",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "SHARE",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 22,
+            "record_id": "SHARE-400100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 23,
+            "record_id": "SHARE-400200"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 24,
+            "record_id": "SHARE-610100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 25,
+            "record_id": "SHARE-210100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 35,
+            "record_id": "SHARE-EQUITY"
+          }
+        ],
+        "parameters": {},
+        "fingerprint": "8e6d4c2a989e827c894ec5cac7facd948433c98dc0db45e5508d2df77f08bbae"
+      },
+      {
+        "rule": "C06 Trial balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "FCCS signed trial balance",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "US100",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.00000000000000",
+        "variance": "0.00000000000000",
+        "lineage": [
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 2,
+            "record_id": "US100-400100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 3,
+            "record_id": "US100-400200"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 4,
+            "record_id": "US100-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 5,
+            "record_id": "US100-210100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 26,
+            "record_id": "US100-FX"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 28,
+            "record_id": "US100-IC"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 30,
+            "record_id": "US100-EQUITY"
+          }
+        ],
+        "parameters": {},
+        "fingerprint": "26198bae1baabf3fe88d0d40df86f36df8b570137c601fd874de3ce85f0ca87f"
+      },
+      {
+        "rule": "C06 Trial balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "FCCS signed trial balance",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GB200",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "EUR",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 6,
+            "record_id": "GB200-400100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 7,
+            "record_id": "GB200-400200"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 8,
+            "record_id": "GB200-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 9,
+            "record_id": "GB200-210100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 27,
+            "record_id": "GB200-FX"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 31,
+            "record_id": "GB200-EQUITY"
+          }
+        ],
+        "parameters": {},
+        "fingerprint": "b821e3e7ccac70b005d25b3013c69024ac722df088d01a5804abc3e7eca8385b"
+      },
+      {
+        "rule": "C06 Trial balance",
+        "rule_version": "2026.11.2",
+        "status": "FAIL",
+        "explanation": "FCCS signed trial balance",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "JP300",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "JPY",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "1",
+        "variance": "-1",
+        "lineage": [
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 10,
+            "record_id": "JP300-400100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 11,
+            "record_id": "JP300-400200"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 12,
+            "record_id": "JP300-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 13,
+            "record_id": "JP300-210100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 32,
+            "record_id": "JP300-EQUITY"
+          }
+        ],
+        "parameters": {},
+        "fingerprint": "59a490749e4e3105e3e6ebfa2519a5cfdd0767a87ca8cb8c3735b37bce59ce68"
+      },
+      {
+        "rule": "C06 Trial balance",
+        "rule_version": "2026.11.2",
+        "status": "FAIL",
+        "explanation": "FCCS signed trial balance",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "KW400",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "KWD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.001",
+        "variance": "-0.001",
+        "lineage": [
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 14,
+            "record_id": "KW400-400100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 15,
+            "record_id": "KW400-400200"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 16,
+            "record_id": "KW400-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 17,
+            "record_id": "KW400-210100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 33,
+            "record_id": "KW400-EQUITY"
+          }
+        ],
+        "parameters": {},
+        "fingerprint": "59f32df51e9bae946bfb1567f32e0d376bfbe361457a6b18c382c54bd3fea938"
+      },
+      {
+        "rule": "C06 Trial balance",
+        "rule_version": "2026.11.2",
+        "status": "FAIL",
+        "explanation": "FCCS signed trial balance",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GROUP",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.01",
+        "variance": "-0.01",
+        "lineage": [
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 18,
+            "record_id": "GROUP-400100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 19,
+            "record_id": "GROUP-400200"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 20,
+            "record_id": "GROUP-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 21,
+            "record_id": "GROUP-210100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 29,
+            "record_id": "GROUP-IC"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 34,
+            "record_id": "GROUP-EQUITY"
+          }
+        ],
+        "parameters": {},
+        "fingerprint": "906fdf3036f9545858e25dce400121f35e90d4744cc822f1acbb4f834f434c69"
+      },
+      {
+        "rule": "C06 Trial balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "FCCS signed trial balance",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "SHARE",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 22,
+            "record_id": "SHARE-400100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 23,
+            "record_id": "SHARE-400200"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 24,
+            "record_id": "SHARE-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 25,
+            "record_id": "SHARE-210100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 35,
+            "record_id": "SHARE-EQUITY"
+          }
+        ],
+        "parameters": {},
+        "fingerprint": "8ad8a4ff4740cb5da1ea1275e761afa4441db7bd53d01bfe912881e83b2705d3"
+      },
+      {
+        "rule": "C10 Journal balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "GL journal J-GB200",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GB200",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "EUR",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 8,
+            "record_id": "GB200-610100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 9,
+            "record_id": "GB200-210100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-GB200",
+          "line_count": 2
+        },
+        "fingerprint": "3c29a7f5077f0748b13feb07bd879a74f7e8efac48812cb7efb2d8d95b0564c5"
+      },
+      {
+        "rule": "C10 Journal balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "GL journal J-GROUP",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GROUP",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 20,
+            "record_id": "GROUP-610100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 21,
+            "record_id": "GROUP-210100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-GROUP",
+          "line_count": 2
+        },
+        "fingerprint": "b28df8b6cd21f88d164cf1bfb2f6ab59dcee1441063cf2cea1d8d1eeabfce2d3"
+      },
+      {
+        "rule": "C10 Journal balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "GL journal J-JP300",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "JP300",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "JPY",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0",
+        "variance": "0",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 12,
+            "record_id": "JP300-610100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 13,
+            "record_id": "JP300-210100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-JP300",
+          "line_count": 2
+        },
+        "fingerprint": "277ac4cf3dc190411a24d5562b7a9492a9e18d5839a4ecdba510ad760e01d637"
+      },
+      {
+        "rule": "C10 Journal balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "GL journal J-KW400",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "KW400",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "KWD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.000",
+        "variance": "0.000",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 16,
+            "record_id": "KW400-610100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 17,
+            "record_id": "KW400-210100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-KW400",
+          "line_count": 2
+        },
+        "fingerprint": "7951446a7ddf4bcb2dc50df18de7319d725988d7f3fe38cb624c6f1f3c7c8f2e"
+      },
+      {
+        "rule": "C10 Journal balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "GL journal J-SHARE",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "SHARE",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 24,
+            "record_id": "SHARE-610100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 25,
+            "record_id": "SHARE-210100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-SHARE",
+          "line_count": 2
+        },
+        "fingerprint": "ed7cb0ee6f81763aac0a4751d9bd842d3ed461e3587d6ecc5b5ef5849de4d466"
+      },
+      {
+        "rule": "C10 Journal balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "GL journal J-US100",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "US100",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 4,
+            "record_id": "US100-610100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 5,
+            "record_id": "US100-210100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-US100",
+          "line_count": 2
+        },
+        "fingerprint": "20c4d1ef8fc128a0ff4b915a8c901c89b414af9360503f781254969ad291241c"
+      },
+      {
+        "rule": "C10 Journal balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "FCCS journal J-GB200",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GB200",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "EUR",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 8,
+            "record_id": "GB200-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 9,
+            "record_id": "GB200-210100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-GB200",
+          "line_count": 2
+        },
+        "fingerprint": "a7e2693effc0b830ad9a6d4122116950c88e116290a00e30c8af0bf2ce66937c"
+      },
+      {
+        "rule": "C10 Journal balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "FCCS journal J-GROUP",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GROUP",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 20,
+            "record_id": "GROUP-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 21,
+            "record_id": "GROUP-210100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-GROUP",
+          "line_count": 2
+        },
+        "fingerprint": "79f9cac62072ad1594e70af90272aaf5f468c863e99b37dfa109e3dd190ce089"
+      },
+      {
+        "rule": "C10 Journal balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "FCCS journal J-JP300",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "JP300",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "JPY",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0",
+        "variance": "0",
+        "lineage": [
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 12,
+            "record_id": "JP300-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 13,
+            "record_id": "JP300-210100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-JP300",
+          "line_count": 2
+        },
+        "fingerprint": "586e20d00ca7c1169c5829a44cea2fed8dae8651a31960f8442131378e9a2791"
+      },
+      {
+        "rule": "C10 Journal balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "FCCS journal J-KW400",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "KW400",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "KWD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.000",
+        "variance": "0.000",
+        "lineage": [
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 16,
+            "record_id": "KW400-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 17,
+            "record_id": "KW400-210100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-KW400",
+          "line_count": 2
+        },
+        "fingerprint": "95c40064991551ffbb1d3d6655be70e53f648587445a89813a1196bd24c01287"
+      },
+      {
+        "rule": "C10 Journal balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "FCCS journal J-SHARE",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "SHARE",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 24,
+            "record_id": "SHARE-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 25,
+            "record_id": "SHARE-210100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-SHARE",
+          "line_count": 2
+        },
+        "fingerprint": "3d78b694307f7b9f8934b6ae73c27c3d264c4ffb748e30b2f936d5cb063c4f10"
+      },
+      {
+        "rule": "C10 Journal balance",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "FCCS journal J-US100",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "US100",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "0",
+        "actual": "0.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 4,
+            "record_id": "US100-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 5,
+            "record_id": "US100-210100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-US100",
+          "line_count": 2
+        },
+        "fingerprint": "948e01f4945a21c819b0bd9a7aa50a0fde23c6b532d31936db97c44e4b139a42"
+      },
+      {
+        "rule": "C11 Journal reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Independent journal amounts at the full POV grain",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GB200",
+          "account": "210100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "EUR",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-50.00",
+        "actual": "-50.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 9,
+            "record_id": "GB200-210100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 9,
+            "record_id": "GB200-210100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-GB200",
+          "tolerance": "0"
+        },
+        "fingerprint": "b5d7cbbcf65b030341b36f41b101494708129e1d151d8097e37c078002dd055a"
+      },
+      {
+        "rule": "C11 Journal reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Independent journal amounts at the full POV grain",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GB200",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "EUR",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "50.00",
+        "actual": "50.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 8,
+            "record_id": "GB200-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 8,
+            "record_id": "GB200-610100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-GB200",
+          "tolerance": "0"
+        },
+        "fingerprint": "8551bb3b93a96147fca74f3b44942665094733afb3b4251b329f1f705ee12679"
+      },
+      {
+        "rule": "C11 Journal reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Independent journal amounts at the full POV grain",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GROUP",
+          "account": "210100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-50.00",
+        "actual": "-50.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 21,
+            "record_id": "GROUP-210100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 21,
+            "record_id": "GROUP-210100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-GROUP",
+          "tolerance": "0"
+        },
+        "fingerprint": "b21de9b3671e2a07a9534f143a1e843b54460d1231850c3b5cae4ed2e1d35729"
+      },
+      {
+        "rule": "C11 Journal reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Independent journal amounts at the full POV grain",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GROUP",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "50.00",
+        "actual": "50.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 20,
+            "record_id": "GROUP-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 20,
+            "record_id": "GROUP-610100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-GROUP",
+          "tolerance": "0"
+        },
+        "fingerprint": "7593e0a26cee088e328f89dde41abd2241d84ac4226ae85c7c7000f71fd6b8a4"
+      },
+      {
+        "rule": "C11 Journal reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Independent journal amounts at the full POV grain",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "JP300",
+          "account": "210100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "JPY",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-50",
+        "actual": "-50",
+        "variance": "0",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 13,
+            "record_id": "JP300-210100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 13,
+            "record_id": "JP300-210100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-JP300",
+          "tolerance": "0"
+        },
+        "fingerprint": "b29824223ae757d7264a9321ab832f24ee9cf0eaaf1aa96460d9e32cd485e599"
+      },
+      {
+        "rule": "C11 Journal reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Independent journal amounts at the full POV grain",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "JP300",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "JPY",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "50",
+        "actual": "50",
+        "variance": "0",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 12,
+            "record_id": "JP300-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 12,
+            "record_id": "JP300-610100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-JP300",
+          "tolerance": "0"
+        },
+        "fingerprint": "07b71062d20d02b65d8c337d67fe3a8ba44d63d3124737777ba28a12495dd203"
+      },
+      {
+        "rule": "C11 Journal reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Independent journal amounts at the full POV grain",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "KW400",
+          "account": "210100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "KWD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-50.000",
+        "actual": "-50.000",
+        "variance": "0.000",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 17,
+            "record_id": "KW400-210100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 17,
+            "record_id": "KW400-210100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-KW400",
+          "tolerance": "0"
+        },
+        "fingerprint": "7bc3cc7db6dd6b3e4382a0694063168eec13b11bef823ba7674f0ea0b6bfc0fd"
+      },
+      {
+        "rule": "C11 Journal reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Independent journal amounts at the full POV grain",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "KW400",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "KWD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "50.000",
+        "actual": "50.000",
+        "variance": "0.000",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 16,
+            "record_id": "KW400-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 16,
+            "record_id": "KW400-610100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-KW400",
+          "tolerance": "0"
+        },
+        "fingerprint": "0076dac09e6c8fd1ce4e7f939ea614e4c0f3382514e16e3d3fbcb2b1f01dad14"
+      },
+      {
+        "rule": "C11 Journal reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Independent journal amounts at the full POV grain",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "SHARE",
+          "account": "210100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-50.00",
+        "actual": "-50.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 25,
+            "record_id": "SHARE-210100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 25,
+            "record_id": "SHARE-210100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-SHARE",
+          "tolerance": "0"
+        },
+        "fingerprint": "16f612b0e557a36e6c6e1d81a3dc5eab84beea8b97f19132d985ba314ac556fb"
+      },
+      {
+        "rule": "C11 Journal reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Independent journal amounts at the full POV grain",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "SHARE",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "50.00",
+        "actual": "50.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 24,
+            "record_id": "SHARE-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 24,
+            "record_id": "SHARE-610100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-SHARE",
+          "tolerance": "0"
+        },
+        "fingerprint": "2af22b33fb3c6fe683828a1e7c1c0975a06d21dfeb67e2024bf59662fb8ab90b"
+      },
+      {
+        "rule": "C11 Journal reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Independent journal amounts at the full POV grain",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "US100",
+          "account": "210100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "-50.00",
+        "actual": "-50.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 5,
+            "record_id": "US100-210100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 5,
+            "record_id": "US100-210100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-US100",
+          "tolerance": "0"
+        },
+        "fingerprint": "cb89dedaf813cdc6046b235d2c354bbf35cc9a41f248141427050edfd6d6ae67"
+      },
+      {
+        "rule": "C11 Journal reconciliation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Independent journal amounts at the full POV grain",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "US100",
+          "account": "610100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "50.00",
+        "actual": "50.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 4,
+            "record_id": "US100-610100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 4,
+            "record_id": "US100-610100"
+          }
+        ],
+        "parameters": {
+          "journal_id": "J-US100",
+          "tolerance": "0"
+        },
+        "fingerprint": "83577dcef1229fa93d43369238c365bf1d88d489850502ad10fd77827db2db81"
+      },
+      {
+        "rule": "C13 Intercompany",
+        "rule_version": "2026.11.2",
+        "status": "FAIL",
+        "explanation": "Reciprocal entity balances at the same account, currency and stage",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "US100",
+          "account": "130100",
+          "intercompany": "GROUP",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "75.00",
+        "actual": "74.99",
+        "variance": "0.01",
+        "lineage": [
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 28,
+            "record_id": "US100-IC"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 29,
+            "record_id": "GROUP-IC"
+          }
+        ],
+        "parameters": {},
+        "fingerprint": "ad2bf228a6cd9dfe30bae2a46a777bf266f3704b7444862f4610962cc5edcedb"
+      },
+      {
+        "rule": "fx",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Approved evidence formula evaluated using Decimal",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GB200",
+          "account": "150100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "EUR",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "1086.42",
+        "actual": "1086.42",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 26,
+            "record_id": "US100-FX"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 27,
+            "record_id": "GB200-FX"
+          }
+        ],
+        "parameters": {
+          "target": "FCCS:GB200-FX",
+          "inputs": [
+            "GL:US100-FX"
+          ],
+          "rate": "0.880000004212",
+          "rate_type": "Closing",
+          "period": "Nov",
+          "year": "FY26",
+          "from_currency": "USD",
+          "to_currency": "EUR",
+          "rounding": "HALF_EVEN",
+          "policy_id": "demo-policy-v1",
+          "rate_id": "synthetic-rate-1",
+          "unrounded_expected": "1086.41974948641970107999995268",
+          "stage": "translation output"
+        },
+        "fingerprint": "a5113256bbab59a9eea16178870460c243deb74452810256307a389c83a514f5"
+      },
+      {
+        "rule": "hierarchy",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Approved evidence formula evaluated using Decimal",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "GROUP",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "300.00",
+        "actual": "300.00",
+        "variance": "0.00",
+        "lineage": [
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 2,
+            "record_id": "US100-400100"
+          },
+          {
+            "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+            "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+            "line": 3,
+            "record_id": "US100-400200"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 18,
+            "record_id": "GROUP-400100"
+          }
+        ],
+        "parameters": {
+          "target": "FCCS:GROUP-400100",
+          "inputs": [
+            "GL:US100-400100",
+            "GL:US100-400200"
+          ],
+          "policy_id": "demo-policy-v1"
+        },
+        "fingerprint": "0243f4d3ce7769bce46c361ae7ab5b8f0a02712aac32b0e6e4eb324b77a73e3e"
+      },
+      {
+        "rule": "consolidation",
+        "rule_version": "2026.11.2",
+        "status": "PASS",
+        "explanation": "Approved evidence formula evaluated using Decimal",
+        "pov": {
+          "environment": "TEST",
+          "application": "FCCS_DEMO",
+          "cube": "Consol",
+          "scenario": "Actual",
+          "year": "FY26",
+          "period": "Nov",
+          "view": "FCCS_Periodic",
+          "entity": "SHARE",
+          "account": "400100",
+          "intercompany": "ICP_None",
+          "movement": "FCCS_Mvmts_NetIncome",
+          "data_source": "FCCS_Managed Data",
+          "consolidation": "FCCS_Entity Input",
+          "currency": "USD",
+          "custom": {
+            "Department": "Corporate"
+          }
+        },
+        "expected": "150.000",
+        "actual": "150.00",
+        "variance": "0.000",
+        "lineage": [
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 18,
+            "record_id": "GROUP-400100"
+          },
+          {
+            "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+            "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+            "line": 22,
+            "record_id": "SHARE-400100"
+          }
+        ],
+        "parameters": {
+          "target": "FCCS:SHARE-400100",
+          "inputs": [
+            "FCCS:GROUP-400100"
+          ],
+          "ownership": "0.5",
+          "method": "proportional",
+          "policy_id": "demo-policy-v1"
+        },
+        "fingerprint": "746360d20de5ff3c43cc7451f6e1527e71c94f7046672b272afd8e8f41823589"
+      },
+      {
+        "rule": "prior_period",
+        "rule_version": "2026.11.2",
+        "status": "NOT_APPLICABLE",
+        "explanation": "Synthetic opening baseline. Historical comparison is available between captured runs.",
+        "pov": {},
+        "expected": null,
+        "actual": null,
+        "variance": null,
+        "lineage": [],
+        "parameters": {},
+        "fingerprint": "9d2fe50c6474cb9a8f2273970cf6a6f4532ad5912faab25efdd4f1899f7797a8"
+      }
+    ],
+    "counts": {
+      "PASS": 67,
+      "FAIL": 9,
+      "NOT_APPLICABLE": 1
+    },
+    "result_sha256": "4840aa3711f5cdc9c79e4f77f5e4c3d717654533eeb03877e43bdda059126d98"
+  },
+  "policy": {
+    "id": "demo-policy-v1",
+    "name": "Synthetic November control policy",
+    "effective_from": "2026-01-01",
+    "effective_to": "2036-12-31",
+    "currency_scales": {
+      "USD": 2,
+      "EUR": 2,
+      "JPY": 0,
+      "KWD": 3
+    },
+    "members": {
+      "environment": [
+        "TEST"
+      ],
+      "application": [
+        "FCCS_DEMO"
+      ],
+      "cube": [
+        "Consol"
+      ],
+      "scenario": [
+        "Actual"
+      ],
+      "year": [
+        "FY26"
+      ],
+      "period": [
+        "Nov"
+      ],
+      "view": [
+        "FCCS_Periodic"
+      ],
+      "entity": [
+        "GB200",
+        "GROUP",
+        "JP300",
+        "KW400",
+        "SHARE",
+        "US100"
+      ],
+      "account": [
+        "130100",
+        "150100",
+        "210100",
+        "399900",
+        "400100",
+        "400200",
+        "610100"
+      ],
+      "intercompany": [
+        "GROUP",
+        "ICP_None",
+        "US100"
+      ],
+      "movement": [
+        "FCCS_Mvmts_NetIncome"
+      ],
+      "data_source": [
+        "FCCS_Managed Data"
+      ],
+      "consolidation": [
+        "FCCS_Entity Input"
+      ],
+      "currency": [
+        "EUR",
+        "JPY",
+        "KWD",
+        "USD"
+      ],
+      "custom.Department": [
+        "Corporate"
+      ]
+    },
+    "custom_dimensions": [
+      "Department"
+    ],
+    "account_map": {
+      "400100": "400100",
+      "400200": "400200",
+      "100100": "100100",
+      "610100": "610100",
+      "210100": "210100",
+      "150100": "150100",
+      "130100": "130100",
+      "399900": "399900"
+    },
+    "sign_map": {
+      "400100": "1",
+      "400200": "1",
+      "100100": "1",
+      "610100": "1",
+      "210100": "1",
+      "150100": "1",
+      "130100": "1",
+      "399900": "1"
+    },
+    "required_controls": [
+      "trial_balance",
+      "journals",
+      "intercompany",
+      "fx",
+      "hierarchy",
+      "consolidation"
+    ],
+    "exclusions": {
+      "prior_period": "Synthetic opening baseline. Historical comparison is available between captured runs."
+    },
+    "maximum_age_seconds": 315360000,
+    "formulas": {
+      "fx": [
+        {
+          "target": "FCCS:GB200-FX",
+          "inputs": [
+            "GL:US100-FX"
+          ],
+          "rate": "0.880000004212",
+          "rate_type": "Closing",
+          "period": "Nov",
+          "year": "FY26",
+          "from_currency": "USD",
+          "to_currency": "EUR",
+          "rounding": "HALF_EVEN",
+          "policy_id": "demo-policy-v1",
+          "rate_id": "synthetic-rate-1"
+        }
+      ],
+      "hierarchy": [
+        {
+          "target": "FCCS:GROUP-400100",
+          "inputs": [
+            "GL:US100-400100",
+            "GL:US100-400200"
+          ],
+          "policy_id": "demo-policy-v1"
+        }
+      ],
+      "consolidation": [
+        {
+          "target": "FCCS:SHARE-400100",
+          "inputs": [
+            "FCCS:GROUP-400100"
+          ],
+          "ownership": "0.5",
+          "method": "proportional",
+          "policy_id": "demo-policy-v1"
+        }
+      ]
+    }
+  },
+  "evidence": [
+    {
+      "batch_id": "710d71379f34f1a227bbfc8b68bd8dd2b0bcfadc68fe383b1d9299c0b537f83d",
+      "original_sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+      "manifest": {
+        "version": "1",
+        "dataset_id": "November 2026 GL synthetic snapshot",
+        "side": "GL",
+        "source_system": "SYNTHETIC_GL",
+        "extracted_at": "2026-11-11T12:00:00+00:00",
+        "row_count": 34,
+        "byte_count": 6877,
+        "sha256": "815218cedf9db4dd59a288cde5e1478fa7cabb3b196625d628adcde1bc69be07",
+        "complete": true,
+        "precision_verified": true,
+        "policy_id": "demo-policy-v1",
+        "unit": "units",
+        "expected_povs": [
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "US100",
+            "account": "400100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "US100",
+            "account": "400200",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "US100",
+            "account": "610100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "US100",
+            "account": "210100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GB200",
+            "account": "400100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "EUR",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GB200",
+            "account": "400200",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "EUR",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GB200",
+            "account": "610100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "EUR",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GB200",
+            "account": "210100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "EUR",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "JP300",
+            "account": "400100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "JPY",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "JP300",
+            "account": "400200",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "JPY",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "JP300",
+            "account": "610100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "JPY",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "JP300",
+            "account": "210100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "JPY",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "KW400",
+            "account": "400100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "KWD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "KW400",
+            "account": "400200",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "KWD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "KW400",
+            "account": "610100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "KWD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "KW400",
+            "account": "210100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "KWD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GROUP",
+            "account": "400100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GROUP",
+            "account": "400200",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GROUP",
+            "account": "610100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GROUP",
+            "account": "210100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "SHARE",
+            "account": "400100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "SHARE",
+            "account": "400200",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "SHARE",
+            "account": "610100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "SHARE",
+            "account": "210100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "US100",
+            "account": "150100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GB200",
+            "account": "150100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "EUR",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "US100",
+            "account": "130100",
+            "intercompany": "GROUP",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GROUP",
+            "account": "130100",
+            "intercompany": "US100",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "US100",
+            "account": "399900",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GB200",
+            "account": "399900",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "EUR",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "JP300",
+            "account": "399900",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "JPY",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "KW400",
+            "account": "399900",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "KWD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GROUP",
+            "account": "399900",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "SHARE",
+            "account": "399900",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          }
+        ],
+        "totals_by_currency": {
+          "USD": "0.00000000000000",
+          "JPY": "0",
+          "KWD": "0.000",
+          "EUR": "0.00"
+        },
+        "journals": {
+          "J-US100": 2,
+          "J-GB200": 2,
+          "J-JP300": 2,
+          "J-KW400": 2,
+          "J-GROUP": 2,
+          "J-SHARE": 2
+        },
+        "controls": {}
+      }
+    },
+    {
+      "batch_id": "69280449d6a92d7a9bcb367678b3376bb92ec96470b4ee08c462096cde65150f",
+      "original_sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+      "manifest": {
+        "version": "1",
+        "dataset_id": "November 2026 FCCS synthetic snapshot",
+        "side": "FCCS",
+        "source_system": "SYNTHETIC_FCCS",
+        "extracted_at": "2026-11-11T12:00:00+00:00",
+        "row_count": 34,
+        "byte_count": 6877,
+        "sha256": "62fbd1b89b30ebef398eee330da618ecdbc08f5cbc2179e68dd23f7d1f1532e6",
+        "complete": true,
+        "precision_verified": true,
+        "policy_id": "demo-policy-v1",
+        "unit": "units",
+        "expected_povs": [
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "US100",
+            "account": "400100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "US100",
+            "account": "400200",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "US100",
+            "account": "610100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "US100",
+            "account": "210100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GB200",
+            "account": "400100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "EUR",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GB200",
+            "account": "400200",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "EUR",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GB200",
+            "account": "610100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "EUR",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GB200",
+            "account": "210100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "EUR",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "JP300",
+            "account": "400100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "JPY",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "JP300",
+            "account": "400200",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "JPY",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "JP300",
+            "account": "610100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "JPY",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "JP300",
+            "account": "210100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "JPY",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "KW400",
+            "account": "400100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "KWD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "KW400",
+            "account": "400200",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "KWD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "KW400",
+            "account": "610100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "KWD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "KW400",
+            "account": "210100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "KWD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GROUP",
+            "account": "400100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GROUP",
+            "account": "400200",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GROUP",
+            "account": "610100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GROUP",
+            "account": "210100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "SHARE",
+            "account": "400100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "SHARE",
+            "account": "400200",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "SHARE",
+            "account": "610100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "SHARE",
+            "account": "210100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "US100",
+            "account": "150100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GB200",
+            "account": "150100",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "EUR",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "US100",
+            "account": "130100",
+            "intercompany": "GROUP",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GROUP",
+            "account": "130100",
+            "intercompany": "US100",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "US100",
+            "account": "399900",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GB200",
+            "account": "399900",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "EUR",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "JP300",
+            "account": "399900",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "JPY",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "KW400",
+            "account": "399900",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "KWD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "GROUP",
+            "account": "399900",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          },
+          {
+            "environment": "TEST",
+            "application": "FCCS_DEMO",
+            "cube": "Consol",
+            "scenario": "Actual",
+            "year": "FY26",
+            "period": "Nov",
+            "view": "FCCS_Periodic",
+            "entity": "SHARE",
+            "account": "399900",
+            "intercompany": "ICP_None",
+            "movement": "FCCS_Mvmts_NetIncome",
+            "data_source": "FCCS_Managed Data",
+            "consolidation": "FCCS_Entity Input",
+            "currency": "USD",
+            "custom": {
+              "Department": "Corporate"
+            }
+          }
+        ],
+        "totals_by_currency": {
+          "USD": "0.01000000000000",
+          "JPY": "1",
+          "KWD": "0.001",
+          "EUR": "0.00"
+        },
+        "journals": {
+          "J-US100": 2,
+          "J-GB200": 2,
+          "J-JP300": 2,
+          "J-KW400": 2,
+          "J-GROUP": 2,
+          "J-SHARE": 2
+        },
+        "controls": {
+          "fx": [
+            {
+              "target": "FCCS:GB200-FX",
+              "inputs": [
+                "GL:US100-FX"
+              ],
+              "rate": "0.880000004212",
+              "rate_type": "Closing",
+              "period": "Nov",
+              "year": "FY26",
+              "from_currency": "USD",
+              "to_currency": "EUR",
+              "rounding": "HALF_EVEN",
+              "policy_id": "demo-policy-v1",
+              "rate_id": "synthetic-rate-1"
+            }
+          ],
+          "hierarchy": [
+            {
+              "target": "FCCS:GROUP-400100",
+              "inputs": [
+                "GL:US100-400100",
+                "GL:US100-400200"
+              ],
+              "policy_id": "demo-policy-v1"
+            }
+          ],
+          "consolidation": [
+            {
+              "target": "FCCS:SHARE-400100",
+              "inputs": [
+                "FCCS:GROUP-400100"
+              ],
+              "ownership": "0.5",
+              "method": "proportional",
+              "policy_id": "demo-policy-v1"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "dispositions": [
+    {
+      "id": "8d6577a958f6cf23a5e9f4528abf0b865779c0b8c4da233222efad5125be65ea",
+      "state": "NEW",
+      "owner": null
+    },
+    {
+      "id": "6706c71674a982cf2c3cfb8dfa7246f90f1d0fd50d34cb874bbb585560eb6e33",
+      "state": "NEW",
+      "owner": null
+    },
+    {
+      "id": "dfb7089558975e7b54d810247105569d841735e070fed6489273691e15807610",
+      "state": "NEW",
+      "owner": null
+    },
+    {
+      "id": "f7efb299f6ee71bea8a289b215f81e8b22e2ffb88d7145d8afd519c2272ff14d",
+      "state": "ASSIGNED",
+      "owner": "demo-analyst"
+    },
+    {
+      "id": "026c36ba5b9f638a656e90d54c3e4dbc198590ee7c220133d7a1833d1e90e0ee",
+      "state": "NEW",
+      "owner": null
+    },
+    {
+      "id": "31bfc62e6b61a7aede0f39c1cf38e89847da16c5fae842ca9eb4c183ce2eba03",
+      "state": "NEW",
+      "owner": null
+    },
+    {
+      "id": "71343296858d68104e6d3894ccdb21707c9252572cda4aa9ad48a15006c9fde2",
+      "state": "NEW",
+      "owner": null
+    },
+    {
+      "id": "71c5f2c0c49da1c0fb044d75c0e1147fcfdf9f3fc49d158bbdb4644f5575da1d",
+      "state": "NEW",
+      "owner": null
+    },
+    {
+      "id": "952b92178d006e9508018a65114d2ba9f49543b832421bcb711da5706607cfef",
+      "state": "NEW",
+      "owner": null
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "id": "demo-policy-v1",
+  "name": "Synthetic November control policy",
+  "effective_from": "2026-01-01",
+  "effective_to": "2036-12-31",
+  "currency_scales": {
+    "USD": 2,
+    "EUR": 2,
+    "JPY": 0,
+    "KWD": 3
+  },
+  "members": {
+    "environment": [
+      "TEST"
+    ],
+    "application": [
+      "FCCS_DEMO"
+    ],
+    "cube": [
+      "Consol"
+    ],
+    "scenario": [
+      "Actual"
+    ],
+    "year": [
+      "FY26"
+    ],
+    "period": [
+      "Nov"
+    ],
+    "view": [
+      "FCCS_Periodic"
+    ],
+    "entity": [
+      "GB200",
+      "GROUP",
+      "JP300",
+      "KW400",
+      "SHARE",
+      "US100"
+    ],
+    "account": [
+      "130100",
+      "150100",
+      "210100",
+      "399900",
+      "400100",
+      "400200",
+      "610100"
+    ],
+    "intercompany": [
+      "GROUP",
+      "ICP_None",
+      "US100"
+    ],
+    "movement": [
+      "FCCS_Mvmts_NetIncome"
+    ],
+    "data_source": [
+      "FCCS_Managed Data"
+    ],
+    "consolidation": [
+      "FCCS_Entity Input"
+    ],
+    "currency": [
+      "EUR",
+      "JPY",
+      "KWD",
+      "USD"
+    ],
+    "custom.Department": [
+      "Corporate"
+    ]
+  },
+  "custom_dimensions": [
+    "Department"
+  ],
+  "account_map": {
+    "400100": "400100",
+    "400200": "400200",
+    "100100": "100100",
+    "610100": "610100",
+    "210100": "210100",
+    "150100": "150100",
+    "130100": "130100",
+    "399900": "399900"
+  },
+  "sign_map": {
+    "400100": "1",
+    "400200": "1",
+    "100100": "1",
+    "610100": "1",
+    "210100": "1",
+    "150100": "1",
+    "130100": "1",
+    "399900": "1"
+  },
+  "required_controls": [
+    "trial_balance",
+    "journals",
+    "intercompany",
+    "fx",
+    "hierarchy",
+    "consolidation"
+  ],
+  "exclusions": {
+    "prior_period": "Synthetic opening baseline. Historical comparison is available between captured runs."
+  },
+  "maximum_age_seconds": 315360000,
+  "formulas": {
+    "fx": [
+      {
+        "target": "FCCS:GB200-FX",
+        "inputs": [
+          "GL:US100-FX"
+        ],
+        "rate": "0.880000004212",
+        "rate_type": "Closing",
+        "period": "Nov",
+        "year": "FY26",
+        "from_currency": "USD",
+        "to_currency": "EUR",
+        "rounding": "HALF_EVEN",
+        "policy_id": "demo-policy-v1",
+        "rate_id": "synthetic-rate-1"
+      }
+    ],
+    "hierarchy": [
+      {
+        "target": "FCCS:GROUP-400100",
+        "inputs": [
+          "GL:US100-400100",
+          "GL:US100-400200"
+        ],
+        "policy_id": "demo-policy-v1"
+      }
+    ],
+    "consolidation": [
+      {
+        "target": "FCCS:SHARE-400100",
+        "inputs": [
+          "FCCS:GROUP-400100"
+        ],
+        "ownership": "0.5",
+        "method": "proportional",
+        "policy_id": "demo-policy-v1"
+      }
+    ]
+  }
+}

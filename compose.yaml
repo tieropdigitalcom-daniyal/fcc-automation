@@ -1,0 +1,98 @@
+name: fccs-validation
+
+x-backend: &backend
+  build:
+    context: .
+    dockerfile: infra/api.Dockerfile
+  environment: &backend-env
+    APP_MODE: demo
+    DATABASE_URL: postgresql+psycopg://fccs:${POSTGRES_PASSWORD:-local-demo-only}@postgres:5432/fccs
+    PUBLIC_ORIGIN: http://localhost:3000
+    QUEUE_MODE: celery
+    REDIS_URL: redis://redis:6379/0
+    STORAGE_BACKEND: s3
+    S3_ENDPOINT: http://minio:9000
+    S3_BUCKET: fccs-evidence
+    AWS_ACCESS_KEY_ID: ${MINIO_ROOT_USER:-local-demo}
+    AWS_SECRET_ACCESS_KEY: ${MINIO_ROOT_PASSWORD:-local-demo-evidence-only}
+    AWS_DEFAULT_REGION: us-east-1
+  volumes:
+    - runtime:/app/runtime
+  depends_on:
+    postgres:
+      condition: service_healthy
+    redis:
+      condition: service_healthy
+    minio:
+      condition: service_started
+
+services:
+  postgres:
+    image: postgres:18
+    environment:
+      POSTGRES_DB: fccs
+      POSTGRES_USER: fccs
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-local-demo-only}
+    volumes:
+      - postgres:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fccs -d fccs"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  redis:
+    image: redis:8
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  minio:
+    image: quay.io/minio/minio:RELEASE.2025-09-07T16-13-09Z
+    command: ["server", "/data", "--console-address", ":9001"]
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-local-demo}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-local-demo-evidence-only}
+    volumes:
+      - evidence:/data
+  init:
+    <<: *backend
+    command: ["python", "-m", "scripts.initialize"]
+  api:
+    <<: *backend
+    depends_on:
+      init:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+  worker:
+    <<: *backend
+    command: ["celery", "-A", "services.api.worker:celery", "worker", "--loglevel=INFO", "--concurrency=2"]
+    depends_on:
+      init:
+        condition: service_completed_successfully
+  beat:
+    <<: *backend
+    command: ["celery", "-A", "services.api.worker:celery", "beat", "--loglevel=INFO", "--schedule=/app/runtime/celerybeat"]
+    depends_on:
+      init:
+        condition: service_completed_successfully
+  web:
+    build: ./apps/web
+    ports:
+      - "127.0.0.1:3000:3000"
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  postgres:
+  redis:
+  evidence:
+  runtime:
