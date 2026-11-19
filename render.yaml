@@ -1,0 +1,52 @@
+services:
+  # FastAPI Python Backend
+  - type: web
+    name: fccs-api
+    runtime: python
+    region: frankfurt
+    plan: free
+    buildCommand: pip install -r requirements.lock && python -m scripts.initialize
+    startCommand: python -m uvicorn services.api.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: APP_MODE
+        value: demo
+      - key: DATABASE_URL
+        sync: false
+      - key: PUBLIC_ORIGIN
+        sync: false
+      - key: QUEUE_MODE
+        value: inline
+      - key: STORAGE_BACKEND
+        value: local
+      - key: EVIDENCE_PATH
+        value: runtime/evidence
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ORACLE_ENABLED
+        value: "false"
+      - key: ORACLE_ENVIRONMENT
+        value: test
+      - key: PYTHON_VERSION
+        value: "3.12.14"
+
+  # Next.js Frontend
+  - type: web
+    name: fccs-web
+    runtime: node
+    region: frankfurt
+    plan: free
+    rootDir: apps/web
+    buildCommand: npm install && npm run build
+    startCommand: npm start -- --port $PORT --hostname 0.0.0.0
+    envVars:
+      - key: API_ORIGIN
+        fromService:
+          name: fccs-api
+          type: web
+          envVarKey: RENDER_EXTERNAL_URL
+      - key: PUBLIC_ORIGIN
+        sync: false
+      - key: NODE_VERSION
+        value: "22"
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"

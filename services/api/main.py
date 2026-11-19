@@ -8,6 +8,7 @@ from datetime import datetime, timedelta, timezone
 
 from authlib.integrations.starlette_client import OAuth
 from fastapi import Depends, FastAPI, File, Form, HTTPException, Request, Response, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, RedirectResponse
 from pydantic import BaseModel, ConfigDict, Field
 from sqlalchemy import select, text, update
@@ -37,6 +38,14 @@ async def lifespan(app):
 app = FastAPI(title="FCCS Validation & Audit Agent", version="0.1.0", lifespan=lifespan,
               docs_url="/docs" if settings.app_mode == "demo" else None,
               openapi_url="/openapi.json" if settings.app_mode == "demo" else None)
+
+# Allow the frontend (on a different domain in cloud deployments) to call the API
+_cors_origins = [settings.public_origin]
+if settings.app_mode == "demo":
+    _cors_origins += ["http://localhost:3000", "http://127.0.0.1:3000"]
+app.add_middleware(CORSMiddleware, allow_origins=_cors_origins, allow_credentials=True,
+                   allow_methods=["*"], allow_headers=["*"], expose_headers=["X-Request-ID"])
+
 app.add_middleware(SessionMiddleware, secret_key=session_secret(), session_cookie="fccs_oidc_state",
                    https_only=settings.app_mode == "production", same_site="lax", max_age=600)
 
