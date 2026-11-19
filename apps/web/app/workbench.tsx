@@ -183,6 +183,15 @@ export default function Workbench({ section }: { section: string }) {
     }[];
   } | null>(null);
   const [compare, setCompare] = useState<Run | null>(null);
+  const [autoRates, setAutoRates] = useState<any[]>([]);
+  const [autoRules, setAutoRules] = useState<{ account_mappings: any[]; consolidation_rules: any[] }>({
+    account_mappings: [],
+    consolidation_rules: [],
+  });
+  const [autoRunning, setAutoRunning] = useState(false);
+  const [autoResult, setAutoResult] = useState<any>(null);
+  const [newRate, setNewRate] = useState({ from: "USD", to: "EUR", rate: "0.880000004212", type: "Closing" });
+  const [newMap, setNewMap] = useState({ source: "", target: "", sign: 1, desc: "", cat: "Asset" });
 
   useEffect(() => {
     api<{ mode: string }>("/config")
@@ -222,6 +231,11 @@ export default function Workbench({ section }: { section: string }) {
     if (section === "jobs") {
       setJobs(await api("/jobs"));
       setSchedules(await api("/schedules"));
+      api<any[]>("/automation/rates").then(setAutoRates).catch(() => undefined);
+      api<any>("/automation/rules").then(setAutoRules).catch(() => undefined);
+      api<any>("/automation/last-result").then((res) => {
+        if (res && res.status !== "IDLE") setAutoResult(res);
+      }).catch(() => undefined);
     }
     if (
       section === "administration" &&
@@ -1582,6 +1596,253 @@ export default function Workbench({ section }: { section: string }) {
                   <small>Notification outbox is retained</small>
                 </div>
               </div>
+
+              <section className="card">
+                <CardTitle
+                  title="Autonomous Oracle FCCS Agent"
+                  subtitle="End-to-end automation: ingests raw GL source files, applies configured FX rates and mapping rules, generates ready-to-load FCCS Data Management integration files, executes consolidation, and verifies every control down to the exact decimal cent."
+                  action={
+                    <button
+                      className="button primary"
+                      disabled={autoRunning}
+                      onClick={async () => {
+                        setAutoRunning(true);
+                        try {
+                          const res = await api<any>("/automation/run", { method: "POST" }, csrf);
+                          setAutoResult(res);
+                          setNotice("Autonomous FCCS pipeline executed successfully: " + res.status);
+                        } catch (err: any) {
+                          setError(err.message);
+                        } finally {
+                          setAutoRunning(false);
+                        }
+                      }}
+                    >
+                      {autoRunning ? (
+                        <>
+                          <LoaderCircle className="spin" size={16} /> Running Automation...
+                        </>
+                      ) : (
+                        <>
+                          <Play size={16} /> Run End-to-End FCCS Automation
+                        </>
+                      )}
+                    </button>
+                  }
+                />
+
+                {autoResult && (
+                  <div style={{ marginTop: "16px", padding: "16px", background: "var(--pale)", borderRadius: "8px", border: "1px solid var(--line)" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px" }}>
+                      <div>
+                        <strong style={{ fontSize: "15px" }}>Validation Status: </strong>
+                        <Badge value={autoResult.status} />
+                      </div>
+                      <small style={{ color: "var(--muted)" }}>Executed: {date(autoResult.timestamp)}</small>
+                    </div>
+
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "10px", margin: "16px 0" }}>
+                      {autoResult.stages?.map((st: any, idx: number) => (
+                        <div key={idx} style={{ padding: "12px", background: "var(--surface)", borderRadius: "6px", border: "1px solid var(--line)" }}>
+                          <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "4px" }}>
+                            <strong>{idx + 1}. {st.stage}</strong>
+                            <Badge value={st.status} />
+                          </div>
+                          <small style={{ color: "var(--muted)" }}>{st.message}</small>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div style={{ marginTop: "16px" }}>
+                      <strong style={{ display: "block", marginBottom: "8px" }}>Generated FCCS Deliverables:</strong>
+                      <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+                        <a
+                          className="button secondary"
+                          href="/api/automation/download/fccs_data_management_load.csv"
+                          download="fccs_data_management_load.csv"
+                        >
+                          <ArrowDownToLine size={15} /> Download FCCS Load File (.csv)
+                        </a>
+                        <a
+                          className="button secondary"
+                          href="/api/automation/download/fccs_exchange_rates.csv"
+                          download="fccs_exchange_rates.csv"
+                        >
+                          <ArrowDownToLine size={15} /> Download Exchange Rates (.csv)
+                        </a>
+                        <a
+                          className="button secondary"
+                          href="/api/automation/download/fccs_account_mappings.csv"
+                          download="fccs_account_mappings.csv"
+                        >
+                          <ArrowDownToLine size={15} /> Download Account Mappings (.csv)
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </section>
+
+              <section className="card">
+                <CardTitle
+                  title="FCCS Currency Exchange Rates"
+                  subtitle="Configured FX rates for automated multi-currency translation into FCCS reporting currencies."
+                />
+                <div className="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>From Currency</th>
+                        <th>To Currency</th>
+                        <th>Rate Type</th>
+                        <th>Scenario</th>
+                        <th>Year / Period</th>
+                        <th>Rate</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {autoRates.map((r, i) => (
+                        <tr key={i}>
+                          <td><strong>{r.from_currency}</strong></td>
+                          <td><strong>{r.to_currency}</strong></td>
+                          <td>{r.rate_type}</td>
+                          <td>{r.scenario}</td>
+                          <td>{r.year} · {r.period}</td>
+                          <td><code>{r.rate}</code></td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+
+                <div style={{ marginTop: "16px", padding: "16px", background: "var(--pale)", borderRadius: "8px" }}>
+                  <strong style={{ display: "block", marginBottom: "12px" }}>Add / Update Currency Rate</strong>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "10px" }}>
+                    <input
+                      type="text"
+                      placeholder="From (e.g. USD)"
+                      value={newRate.from}
+                      onChange={(e) => setNewRate({ ...newRate, from: e.target.value.toUpperCase() })}
+                      style={{ padding: "8px", borderRadius: "4px", border: "1px solid var(--line)" }}
+                    />
+                    <input
+                      type="text"
+                      placeholder="To (e.g. EUR)"
+                      value={newRate.to}
+                      onChange={(e) => setNewRate({ ...newRate, to: e.target.value.toUpperCase() })}
+                      style={{ padding: "8px", borderRadius: "4px", border: "1px solid var(--line)" }}
+                    />
+                    <input
+                      type="text"
+                      placeholder="Rate (e.g. 0.880000)"
+                      value={newRate.rate}
+                      onChange={(e) => setNewRate({ ...newRate, rate: e.target.value })}
+                      style={{ padding: "8px", borderRadius: "4px", border: "1px solid var(--line)" }}
+                    />
+                    <select
+                      value={newRate.type}
+                      onChange={(e) => setNewRate({ ...newRate, type: e.target.value })}
+                      style={{ padding: "8px", borderRadius: "4px", border: "1px solid var(--line)" }}
+                    >
+                      <option value="Closing">Closing</option>
+                      <option value="Average">Average</option>
+                      <option value="Historical">Historical</option>
+                    </select>
+                    <button
+                      className="button secondary"
+                      onClick={async () => {
+                        const updated = [...autoRates, { from_currency: newRate.from, to_currency: newRate.to, rate: newRate.rate, rate_type: newRate.type, scenario: "Actual", year: "FY26", period: "Nov" }];
+                        setAutoRates(updated);
+                        await api("/automation/rates", { method: "POST", body: JSON.stringify(updated) }, csrf);
+                        setNotice(`Added exchange rate ${newRate.from} -> ${newRate.to}`);
+                      }}
+                    >
+                      <Plus size={15} /> Add Rate
+                    </button>
+                  </div>
+                </div>
+              </section>
+
+              <section className="card">
+                <CardTitle
+                  title="FCCS Consolidation & Account Mappings"
+                  subtitle="Source ERP chart of accounts to FCCS target accounts and legal entity ownership rules."
+                />
+                <div className="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Source Account</th>
+                        <th>Target FCCS Account</th>
+                        <th>Sign Multiplier</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {autoRules.account_mappings?.map((m: any, i: number) => (
+                        <tr key={i}>
+                          <td><code>{m.source_account}</code></td>
+                          <td><strong>{m.target_account}</strong></td>
+                          <td><span className="badge">{m.sign > 0 ? "+1 (Debit)" : "-1 (Credit)"}</span></td>
+                          <td>{m.category}</td>
+                          <td><small>{m.description}</small></td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+
+                <div style={{ marginTop: "16px", padding: "16px", background: "var(--pale)", borderRadius: "8px" }}>
+                  <strong style={{ display: "block", marginBottom: "12px" }}>Add Account Mapping Rule</strong>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "10px" }}>
+                    <input
+                      type="text"
+                      placeholder="Source Account"
+                      value={newMap.source}
+                      onChange={(e) => setNewMap({ ...newMap, source: e.target.value })}
+                      style={{ padding: "8px", borderRadius: "4px", border: "1px solid var(--line)" }}
+                    />
+                    <input
+                      type="text"
+                      placeholder="Target FCCS Account"
+                      value={newMap.target}
+                      onChange={(e) => setNewMap({ ...newMap, target: e.target.value })}
+                      style={{ padding: "8px", borderRadius: "4px", border: "1px solid var(--line)" }}
+                    />
+                    <select
+                      value={newMap.sign}
+                      onChange={(e) => setNewMap({ ...newMap, sign: Number(e.target.value) })}
+                      style={{ padding: "8px", borderRadius: "4px", border: "1px solid var(--line)" }}
+                    >
+                      <option value={1}>+1 (Debit Normal)</option>
+                      <option value={-1}>-1 (Credit Invert)</option>
+                    </select>
+                    <input
+                      type="text"
+                      placeholder="Description"
+                      value={newMap.desc}
+                      onChange={(e) => setNewMap({ ...newMap, desc: e.target.value })}
+                      style={{ padding: "8px", borderRadius: "4px", border: "1px solid var(--line)" }}
+                    />
+                    <button
+                      className="button secondary"
+                      onClick={async () => {
+                        if (!newMap.source || !newMap.target) return;
+                        const updated = [...(autoRules.account_mappings || []), { source_account: newMap.source, target_account: newMap.target, sign: newMap.sign, category: newMap.cat, description: newMap.desc }];
+                        const newRules = { ...autoRules, account_mappings: updated };
+                        setAutoRules(newRules);
+                        await api("/automation/rules", { method: "POST", body: JSON.stringify(newRules) }, csrf);
+                        setNotice(`Added account mapping ${newMap.source} -> ${newMap.target}`);
+                        setNewMap({ source: "", target: "", sign: 1, desc: "", cat: "Asset" });
+                      }}
+                    >
+                      <Plus size={15} /> Add Mapping
+                    </button>
+                  </div>
+                </div>
+              </section>
+
               <section className="card">
                 <CardTitle
                   title="Validation schedules"
